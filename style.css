@@ -1,0 +1,133 @@
+/* helper to visualize */
+/* * {
+  outline: 1px dotted purple;
+  padding: 5px;
+} */
+
+:root {
+  --dark: #1F2130;
+  --light: #FFF6F0;
+  --main: #753def;
+}
+
+body {
+  /* background-color: #FFF6F0; */
+  margin: 0;
+  background-color: var(--light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.d-flex,
+.row {
+  /* width: calc(100% - 5px); */
+  display: flex;
+}
+
+/* mobile screen mode 📱 */
+/* NOTE these classes will be applied, until the max-width is reached */
+@media (max-width: 600px) {
+
+  .d-flex {
+    flex-direction: column;
+  }
+
+  body {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+
+}
+
+
+header {
+  padding: 1em 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-up-button {
+  /* padding-left: 30%; */
+  margin-left: 30%;
+  padding: 15px;
+  color: var(--main);
+  /* border: 10px; */
+}
+
+main {
+  /* NOTE just one value, applies to all sides */
+  padding: 1em;
+  /* NOTE two values applies to Y (top,bottom, then X (start,end) */
+  padding: 2em 1em;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  margin: .5em .25em;
+  color: var(--dark);
+}
+
+a.active,
+a:hover {
+  /* color: #753def; */
+  color: var(--main);
+  text-decoration: underline;
+}
+
+/* FIXME uuuuh this took too long to get working, a custom class works great! */
+main section button:first-of-type {
+  /* background-color: #713EDD; */
+  background-color: var(--main);
+  border: 0;
+  border-radius: 50em;
+  padding: 1em;
+  color: #FFF6F0;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.548);
+}
+
+h1 {
+  /* padding: 1rem; */
+  margin-top: 0;
+}
+
+.hero-card {
+  width: 50%;
+  padding: 2em;
+  padding-top: 0;
+}
+
+.fit-img {
+  width: 100%;
+}
+
+.card {
+  /* background-color: aliceblue; */
+}
+
+footer .card {
+  /* background: aliceblue; */
+  width: 25%;
+  color: #FFF6F0;
+}
+
+footer {
+  /* justify-content: center; */
+  /* justify-content: end; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+  background-color: #1F2130;
+  padding: 35px;
+}
+
+.fs-3 {
+  font-size: 24px;
+}
+
+.fc-main {
+  color: var(--main);
+}
