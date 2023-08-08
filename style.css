@@ -4,6 +4,19 @@
   padding: 5px;
 } */
 
+/* REVIEW css units
+px - pixels an exact measurement in screen pixels
+% - a percent of the targeted elements *parent container
+em - 1em is equal to the elements font size (16px) is standard
+rem - 1rem is equal to the roots font size (root being webpage as a whole)
+vh / vw - view height and view width, these are a percentage of the the respective window size
+many more below
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+*/
+
+
+/* NOTE creates re-usable values that we can access in our rules later */
 :root {
   --dark: #1F2130;
   --light: #FFF6F0;
@@ -13,6 +26,7 @@
 body {
   /* background-color: #FFF6F0; */
   margin: 0;
+  /* NOTE here we use the variable --light, so the background color takes the value of #fff6f0 */
   background-color: var(--light);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
@@ -114,6 +128,7 @@ footer .card {
   color: #FFF6F0;
 }
 
+/* REVIEW a few different options with it comes to justify content */
 footer {
   /* justify-content: center; */
   /* justify-content: end; */
@@ -124,10 +139,12 @@ footer {
   padding: 35px;
 }
 
+/* fs is short for font-size */
 .fs-3 {
   font-size: 24px;
 }
 
+/* fc is short for font color */
 .fc-main {
   color: var(--main);
 }
